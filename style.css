@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #202124;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Фон */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Прості анімовані хмаринки */
+.cloud {
+  position: absolute;
+  background-color: #d8d8d8;
+  border-radius: 10px;
+  opacity: 0.65;
+  animation: moveCloud linear infinite;
+}
+
+.cloud1 {
+  width: 70px;
+  height: 20px;
+  top: 18%;
+  animation-duration: 20s;
+}
+
+.cloud2 {
+  width: 90px;
+  height: 24px;
+  top: 38%;
+  animation-duration: 28s;
+  animation-delay: -8s;
+}
+
+.cloud3 {
+  width: 55px;
+  height: 16px;
+  top: 60%;
+  animation-duration: 22s;
+  animation-delay: -14s;
+}
+
+.cloud4 {
+  width: 80px;
+  height: 22px;
+  top: 80%;
+  animation-duration: 26s;
+  animation-delay: -4s;
+}
+
+/* Центрований блок */
+.card-container {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  border: 3px solid #535353;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(4px);
+  max-width: 90%;
+  width: 360px;
+  transition: transform 0.3s ease;
+}
+
+.card-container:hover {
+  transform: translateY(-4px);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+
+.google-g { color: #4285F4; }
+.google-o1 { color: #EA4335; }
+.google-o2 { color: #FBBC05; }
+.google-g2 { color: #4285F4; }
+.google-l { color: #34A853; }
+.google-e { color: #EA4335; }
+.highlight { color: #535353; font-weight: 700; }
+
+.qr-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 16px;
+  border: 3px solid #535353;
+  border-radius: 12px;
+  padding: 8px;
+  background: #fff;
+}
+
+.qr-image {
+  width: 200px;
+  height: 200px;
+  display: block;
+  border-radius: 4px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #5f6368;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Анімація руху хмар */
+@keyframes moveCloud {
+  0% { left: 100%; }
+  100% { left: -120px; }
+}
